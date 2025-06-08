@@ -1,8 +1,7 @@
 import bpy
 from bpy.props import StringProperty, EnumProperty
 
-
-              
+             
 
 class MyShortAddonProperties(bpy.types.Operator):
     bl_idname = "wm.template_operator"
@@ -63,8 +62,7 @@ class MyShortAddonProperties(bpy.types.Operator):
             print("error")
         return {'FINISHED'} 
 
-
-        
+       
     def draw(self, context):
         layout = self.layout
         layout.operator("wm.template_operator")
