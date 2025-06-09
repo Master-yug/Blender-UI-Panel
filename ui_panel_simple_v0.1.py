@@ -1,7 +1,6 @@
 import bpy
 from bpy.props import StringProperty, EnumProperty
-
-             
+           
 
 class MyShortAddonProperties(bpy.types.Operator):
     bl_idname = "wm.template_operator"
@@ -61,8 +60,7 @@ class MyShortAddonProperties(bpy.types.Operator):
         else:
             print("error")
         return {'FINISHED'} 
-
-       
+      
     def draw(self, context):
         layout = self.layout
         layout.operator("wm.template_operator")
@@ -88,7 +86,6 @@ class MyShortAddonProperties(bpy.types.Operator):
 #            print(obj.name)
 #            row.prop(obj, "hide_viewport", icon = 'CHECKBOX_HLT', text = "")
 #            row.label(text="" + obj.name)
-
 
 class Parts(bpy.types.Panel):
     """Creates a Panel in the Object properties window"""
@@ -154,8 +151,6 @@ class Parts(bpy.types.Panel):
 
 #        row.operator("mesh.dropdownexample")
 #        col.prop(scn, "comboBox", text="")
-
-
 
 classes = [Parts, MyShortAddonProperties]
                 
